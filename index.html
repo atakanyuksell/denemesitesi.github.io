@@ -1,87 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clarusway Survey Form</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Banking Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20190221/ourmid/pngtree-computer-bank-card-blue-background-global-purchase-image_19034.jpg");
+            padding: 20px;
+        }
+
+        h2 {
+            color: #ffffff;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: inline-block;
+            width: 200px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="file"] {
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
-
 <body>
-    <div id="container">
+    <h2>Banking Information Form</h2>
+    <form action="submit.php" method="post" enctype="multipart/form-data">
+        <label for="account_holder_name">Account Holder Name:</label>
+        <input type="text" id="account_holder_name" name="account_holder_name" required><br><br>
 
-       <h1 id="title">Clarusway Survey Form</h1>
-       <p id="description">Thank you for taking the time to help us improve the platform</p>
+        <label for="account_number">Account Number:</label>
+        <input type="text" id="account_number" name="account_number" required><br><br>
 
-       <form id="survey-form" action="">
+        <label for="account_type">Account Type:</label>
+        <select id="account_type" name="account_type" required>
+            <option value="Savings">Savings</option>
+            <option value="Checking">Checking</option>
+            <option value="Fixed Deposit">Fixed Deposit</option>
+        </select><br><br>
 
-           <div class="box">
-               <label for="name">Name</label> <br>
-               <input type="text" id="name" name="name" placeholder="Enter your name">
-           </div>
+        <label for="bank_name">Bank Name:</label>
+        <input type="text" id="bank_name" name="bank_name" required><br><br>
 
-           <div class="box">
-               <label for="surname">Surname</label> <br>
-               <input type="text" id="surname" name="surname" placeholder="Enter your surname">
-           </div>
+        <label for="branch_name">Branch Name:</label>
+        <input type="text" id="branch_name" name="branch_name" required><br><br>
 
-           <div class="box">
-               <label for="email">Email</label> <br>
-               <input type="email" id="email" name="email" placeholder="user@clarusway.com">
-           </div> <br>       
+        <label for="identification_proof">Identification Proof:</label>
+        <input type="file" id="identification_proof" name="identification_proof" required><br><br>
 
-           <div class="box4">Which option best describes your current role? <br>
-               <select name="role" id="role">
-                    <option value="current-role">Select current role</option>
-                    <option value="Movie">Student</option>
-                    <option value="Movie">Teacher</option>
-                    <option value="Movie">Full Time Job</option>
-                    <option value="Movie">Part Time Job</option>
-                    <option value="Movie">Full Time Learner</option>
-                    <option value="Movie">None</option>
-               </select>
-           </div>       
+        <label for="occupation">Occupation:</label>
+        <input type="text" id="occupation" name="occupation" required><br><br>
 
-           <div class="box4">Would you recomend Clarusway to a friend?<br>
-               <input type="radio" id="yes" name="yes" value="yes" checked>
-               <label for="yes">Definitely, Yes</label><br>
-               <input type="radio" id="maybe" name="maybe" value="maybe" >
-               <label for="maybe">Maybe</label><br>
-               <input type="radio" id="not_sure" name="not_sure" value="not_sure">
-               <label for="not_sure">Not sure</label><br>
-               <input type="radio" id="no" name="no" value="no">
-               <label for="no">Definitely, No</label><br>
-           </div>
+        <label for="income_details">Income Details:</label>
+        <input type="text" id="income_details" name="income_details" required><br><br>
 
-           <div class="box4">What is your favorite feature of Clarusway?<br>
-                <select name="feature" id="feature">
-                    <option value="fav_feature">Select an option</option>
-                    <option value="fav_feature">LMS content</option>
-                    <option value="fav_feature">Online In-Classes</option>
-                    <option value="fav_feature">Projects</option>
-                    <option value="fav_feature">Instructors</option>
-                    <option value="fav_feature">Mentors</option>
-                </select>
-           </div>      
+        <label for="transaction_history">Transaction History:</label>
+        <textarea id="transaction_history" name="transaction_history" required></textarea><br><br>
 
-           <div class="box4">What would you like to see improved? (Check all that apply)<br>
-                <input type="checkbox" id="fe" name="fe" value="Front-end">
-                <label for="fe">Front-end Projects</label><br>
-                <input type="checkbox" id="be" name="be" value="Back-end">
-                <label for="be">Back-end Projects</label><br>
-                <input type="checkbox" id="ds" name="ds" value="Data Science" >
-                <label for="ds">Data Science</label><br>
-                <input type="checkbox" id="ac" name="ac" value="Aditional Courses" >
-                <label for="ac">Additional Courses</label>  
-           </div>
+        <label for="balance">Balance:</label>
+        <input type="text" id="balance" name="balance" required><br><br>
 
-           <div class="box4">Any comments or suggestions? <br><br>
-                <textarea name="message" id="comment" rows="" cols="26" style="overflow-y: scroll" placeholder="Enter your comment here...Thanxs for your comments"></textarea>
-                <button type="submit" id="submit">Submit</button>
-           </div>          
-       </form>
-    </div>    
+        <input type="submit" value="Submit">
+    </form>
 </body>
-
 </html>
