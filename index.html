@@ -2,95 +2,88 @@
 <html>
 <head>
     <title>Banking Information Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20190221/ourmid/pngtree-computer-bank-card-blue-background-global-purchase-image_19034.jpg");
-            padding: 20px;
-        }
-
-        h2 {
-            color: #ffffff;
-        }
-
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        label {
-            display: inline-block;
-            width: 200px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        input[type="text"],
-        select,
-        textarea {
-            width: 300px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        input[type="file"] {
-            margin-top: 5px;
-        }
-
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h2>Banking Information Form</h2>
     <form action="submit.php" method="post" enctype="multipart/form-data">
-        <label for="account_holder_name">Account Holder Name:</label>
-        <input type="text" id="account_holder_name" name="account_holder_name" required><br><br>
 
-        <label for="account_number">Account Number:</label>
-        <input type="text" id="account_number" name="account_number" required><br><br>
-
-        <label for="account_type">Account Type:</label>
-        <select id="account_type" name="account_type" required>
-            <option value="Savings">Savings</option>
-            <option value="Checking">Checking</option>
-            <option value="Fixed Deposit">Fixed Deposit</option>
-        </select><br><br>
-
-        <label for="bank_name">Bank Name:</label>
-        <input type="text" id="bank_name" name="bank_name" required><br><br>
-
-        <label for="branch_name">Branch Name:</label>
-        <input type="text" id="branch_name" name="branch_name" required><br><br>
-
-        <label for="identification_proof">Identification Proof:</label>
-        <input type="file" id="identification_proof" name="identification_proof" required><br><br>
-
-        <label for="occupation">Occupation:</label>
-        <input type="text" id="occupation" name="occupation" required><br><br>
-
-        <label for="income_details">Income Details:</label>
-        <input type="text" id="income_details" name="income_details" required><br><br>
-
-        <label for="transaction_history">Transaction History:</label>
-        <textarea id="transaction_history" name="transaction_history" required></textarea><br><br>
-
-        <label for="balance">Balance:</label>
-        <input type="text" id="balance" name="balance" required><br><br>
-
-        <input type="submit" value="Submit">
+        <div class="flexible-container">
+            
+            <div>
+            <label for="customer_name">Customer Name:</label>
+            <input type="text" id="customer_name" name="customer_name" required><br><br>
+             </div>
+            
+             <div>
+            <label for="customer_address">Customer Address:</label>
+            <input type="text" id="customer_address" name="customer_address" required>
+            <br><br>
+            </div>
+            
+            
+            <div>
+            <label for="customer_mailing_address">Customer Mailing Address:</label>
+            <input type="text" id="customer_mailing_address" name="customer_mailing_address" required><br><br>
+            </div>
+            
+    
+            <label for="hmp_cf">Home Phone/Consent Flag:</label>
+            <input type="text" id="hmp_cf" name="hmp_cf" required><br><br>
+    
+            <label for="mail_sequence_code">Mail Sequence Code:</label>
+            <input type="text" id="mail_sequence_code" name="mail_sequence_code" required><br><br>
+    
+            <label for="auto_online_last_access">Auto Online Last Access:</label>
+            <input type="text" id="auto_online_last_access" name="auto_online_last_access" required><br><br>
+    
+            <label for="occupation">ECOA Code:</label>
+            <input type="text" id="occupation" name="occupation" required><br><br>
+    
+            <label for="income_details">Customer SSN:</label>
+            <input type="text" id="income_details" name="income_details" required><br><br>
+    
+            <label for="transaction_history">Customer ECN::</label>
+            <textarea id="transaction_history" name="transaction_history" required></textarea><br><br>
+    
+            <label for="customer_cif">Customer CIF:</label>
+            <input type="text" id="customer_cif" name="customer_cif" required><br><br>
+    
+            <label for="customer_type">Customer Type:</label>
+            <input type="text" id="customer_type" name="customer_type" required><br><br>
+    
+            <label for="birth_date">Birth Date:</label>
+            <input type="text" id="birth_date" name="birth_date" required><br><br>
+            
+            <label for="ada_correspondence_type">ADA Correspondence Type:</label>
+            <input type="text" id="ada_correspondence_type" name="ada_correspondence_type" required><br><br>
+    
+            <label for="customer_risk_status">Customer Risk Status:</label>
+            <input type="text" id="customer_risk_status" name="customer_risk_status" required><br><br>
+    
+            <label for="customer_name2">Customer Name 2:</label>
+            <input type="text" id="customer_name2" name="customer_name2" required><br><br>
+    
+            <label for="customer_ssn2">Customer SSN 2:</label>
+            <input type="text" id="customer_ssn2" name="customer_ssn2" required><br><br>
+    
+            <label for="customer_name3">Customer Name 3:</label>
+            <input type="text" id="customer_name3" name="customer_name3" required><br><br>
+    
+            <label for="customer_ssn3">Customer SSN 3:</label>
+            <input type="text" id="customer_ssn3" name="customer_ssn3" required><br><br>
+    
+            <label for="customer_name4">Customer Name 4:</label>
+            <input type="text" id="customer_name4" name="customer_name4" required><br><br>
+    
+            <label for="customer_ssn4">Customer SSN 4:</label>
+            <input type="text" id="customer_ssn4" name="customer_ssn4" required><br><br>
+    
+            <label for="customer_name5">Customer Name 5:</label>
+            <input type="text" id="customer_name5" name="customer_name5" required><br><br>
+    
+            <label for="customerssn5">Customer SSN 5:</label>
+            <input type="text" id="customerssn5" name="customerssn5" required><br><br></div>
     </form>
 </body>
 </html>
